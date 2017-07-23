@@ -44,7 +44,7 @@ public class UserCreateController {
         return new ModelAndView("user_create", "form", new UserCreateForm());
     }
 
-    @RequestMapping(value = "/user_create.html", method = RequestMethod.POST)
+    @RequestMapping(value = "/example-spring-boot-mvc/user_create.html", method = RequestMethod.POST)
     public String createUser(@ModelAttribute("form") @Valid UserCreateForm form, BindingResult result) {
         LOGGER.debug("Received request to create {}, with result={}", form, result);
         if (result.hasErrors()) {
