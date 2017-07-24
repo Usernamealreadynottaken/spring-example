@@ -16,7 +16,7 @@ public class MoviesLoadFile {
 
     public void zaczytajPlikDoListyIMapy() throws FileNotFoundException {
 
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dgrabare\\Desktop\\ml-20m\\moviesTest.csv"));
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dgrabare\\IdeaProjects\\spring-example\\src\\main\\java\\eu\\example\\Resources\\moviesTest.csv"));
         List<Movies> moviesList = new ArrayList<>();
         try {
             String line1 = br.readLine();
