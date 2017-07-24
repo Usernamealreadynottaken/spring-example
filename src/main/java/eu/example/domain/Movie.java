@@ -14,7 +14,7 @@ import java.util.Date;
  */
 
 @Entity
-public class Movies {
+public class Movie {
 
     @Id
     @NotNull
@@ -29,7 +29,7 @@ public class Movies {
     String genres;
 
 
-    public Movies(String movieId, String title, String genres) {
+    public Movie(String movieId, String title, String genres) {
         this.movieId = movieId;
         this.title = title;
         this.genres = genres;
@@ -65,6 +65,7 @@ public class Movies {
         return Objects.toStringHelper(this)
                 .add("movieId", movieId)
                 .add("title", title)
+                .add("title", genres)
                 .toString();
     }
 

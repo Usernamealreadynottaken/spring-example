@@ -1,35 +1,28 @@
 package eu.example.controller;
 
-import eu.example.domain.Movies;
+import eu.example.domain.Movie;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by DGRABARE on 2017-07-24.
- */
-public class MoviesLoadFile {
+public class MoviesLoader {
 
-    public void zaczytajPlikDoListyIMapy() throws FileNotFoundException {
+    public void loadMoviesFromFile() throws IOException {
 
         BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dgrabare\\IdeaProjects\\spring-example\\src\\main\\java\\eu\\example\\Resources\\moviesTest.csv"));
-        List<Movies> moviesList = new ArrayList<>();
-        try {
-            String line1 = br.readLine();
+        List<Movie> moviesList = new ArrayList<>();
+            br.readLine();
             String line = br.readLine();
 
-            while(line!=null){
+            while (line!=null) {
                 String[] tab = line.split(",");
-                Movies createMovie = new Movies(tab[0],tab[1],tab[2]);
+                Movie createMovie = new Movie(tab[0],tab[1],tab[2]);
                 moviesList.add(createMovie);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
 
